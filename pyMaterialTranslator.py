@@ -51,5 +51,8 @@ if selected_node_path is not None:
             new_material_path = material_path.replace("materials","mantraShaders")
             #print new_material_path
             selected_node.parm('shop_materialpath' + str(i+1)).set(new_material_path)
+    else:
+        print ("Please select material node")
+        exit()
             
 print ("Material transfer completed")
