@@ -2,7 +2,7 @@
 ### Mocap Data Reader (mocapTxtReader.hipnc, pyMocapReader.py)
 ![](mocap.gif)
 ### Code To Run UI File In Houdini
-```
+```python
 import hou
 import os
 
