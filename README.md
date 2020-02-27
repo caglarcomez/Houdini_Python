@@ -36,10 +36,10 @@ def show():
 ![](hda_py01.JPG)
 3. In Parameters Tab, create parameter with Callback Script, change script type to Python
 4. Type the code below in Callback Script to trigger the function in Python Module
+![](hda_py02.JPG)
 ```python
 hou.pwd().hdaModule().CacheAction()
 ```
-![](hda_py02.JPG)
 
 
 
