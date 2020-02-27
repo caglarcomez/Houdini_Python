@@ -30,4 +30,16 @@ def show():
     win.show()
 ```
 
+### Triger Python Module Function From HDA Parameters Callback Script
+1. In Type Properties Panel -> Scripts Tab create an Event Handler for Python Module.
+2. Type your code
+![](hda_py01.JPG)
+3. In Parameters Tab, create parameter with Callback Script, change script type to Python
+4. Type the code below in Callback Script to trigger the function in Python Module
+```python
+hou.pwd().hdaModule().CacheAction()
+```
+![](hda_py02.JPG)
+
+
 
