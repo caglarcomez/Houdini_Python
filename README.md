@@ -38,7 +38,7 @@ def show():
 4. Type the code below in Callback Script to trigger the function in Python Module
 ![](hda_py02.JPG)
 ```python
-hou.pwd().hdaModule().CacheAction()
+hou.pwd().hdaModule().MyFunc()
 ```
 
 
