@@ -40,6 +40,9 @@ def show():
 ```python
 hou.pwd().hdaModule().MyFunc()
 ```
-
+or
+```python
+kwargs['node'].hdaModule().MyFunc()
+```
 
 
