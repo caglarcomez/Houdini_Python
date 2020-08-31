@@ -45,4 +45,11 @@ or
 kwargs['node'].hdaModule().MyFunc()
 ```
 
+### hython (hrender)
+
+Set Windows Environment Varaiable (Path - C:\Program Files\Side Effects Software\Houdini 18.0.460\bin)
+
+```python
+hython "C:\Program Files\Side Effects Software\Houdini 18.0.460\bin\hrender.py" camera_clouds.hipnc -d mantra1 -e -f 1 120
+```
 
