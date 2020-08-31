@@ -45,7 +45,7 @@ or
 kwargs['node'].hdaModule().MyFunc()
 ```
 
-### hython (hrender)
+### Houdini Command Line Rendering (hython - hrender)
 
 Set Windows Environment Varaiable (Path - C:\Program Files\Side Effects Software\Houdini 18.0.460\bin)
 
