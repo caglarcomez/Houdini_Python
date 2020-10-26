@@ -8,6 +8,7 @@ Houdini convention; classes start with capital case, methods start with lowercas
       - name()
       - path()
       - Node
+        - parm(parm_path) → hou.Parm or None
         - ObjNode
         - SopNode
         - DopNode
@@ -65,6 +66,8 @@ print node.evalParm("tx")
   - NetworkItem
     - NetworkMovableItem
       - SopNode
+	- parm(parm_path) → hou.Parm or None
+	- geometry(output_index=0) → hou.Geometry
 ```
 
 ```python
