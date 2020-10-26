@@ -26,7 +26,7 @@ print type(hou.pwd()), hou.pwd().name()
 
 #### ObjNode Class
 ```
-- **Node**
+- # Node
   - name()
   - setName()
   - path()
