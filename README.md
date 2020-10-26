@@ -59,7 +59,39 @@ print node.evalParm("tx")
 #0.0
 ```
 
-#### SopNode Class
+#### SopNode Class Inheritence
+```
+- hou
+  - NetworkItem
+    - NetworkMovableItem
+      - SopNode
+```
+
+```python
+node = hou.node("../geo1/")
+sop = node.children()[1]
+print type(sop)
+print sop.geometry()
+print sop.inputGeometry(0)
+
+parm = node.parm("tx")
+print type(parm)
+parm.set(10)
+print parm.eval()
+parm.revertToDefaults()
+print parm.eval()
+print parm.name()
+print parm.node()
+
+#<class 'hou.SopNode'>
+#<hou.Geometry in /obj/geo1/scatter1 read-only>
+#<hou.Geometry in /obj/geo1/box1 read-only>
+#<class 'hou.Parm'>
+#10.0
+#0.0
+#tx
+#geo1
+```
 
 ### Mocap Data Reader (mocapTxtReader.hipnc, pyMocapReader.py)
 ![](mocap.gif)
