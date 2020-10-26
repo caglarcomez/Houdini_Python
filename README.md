@@ -1,50 +1,66 @@
 # Python
-### HOU Module
+### HOU Module Inheritence
 Houdini convention; classes start with capital case, methods start with lowercase.
 ```
 - hou
   - NetworkItem
     - NetworkMovableItem
+      - name()
+      - path()
       - Node
-        - SopNode
-          - Geometry
-          - Parm
         - ObjNode
+        - SopNode
         - DopNode
-        - RopNode
+        - PopNode
         - ...
-      - NetworkBox
-      - ...
 ```
 
 ```python
 print type(hou.node("/obj/geo1")), hou.node("/obj/geo1").name()
 print type(hou.pwd()), hou.pwd().name()
+# name(), path() Inherited from hou.NetworkMovableItem
 #<class 'hou.ObjNode'> geo1
 #<class 'hou.ObjNode'> pythonscript1
 ```
 
-#### ObjNode Class
+#### ObjNode Class Inheritence
 ```
-- # Node
-  - name()
-  - setName()
-  - path()
-  - parent()
-  - **ObjNode**
-    - origin()
-    - localTransform()
-    - worldTransform()
-    - **Node**
-      - children()
-      - allSubChildren()
-      - inputs()
-      - outputs()
-    - **Parm**
-      - parm(path)
-      - evalParm()
-      - parms()
+- hou
+  - NetworkItem
+    - NetworkMovableItem
+      - ObjNode
 ```
+
+```python
+node = hou.node("/obj/geo1")
+print node.name()
+print node.path()
+print node.children()
+print node.inputs()
+print node.localTransform()
+print node.origin()
+
+parm = node.parm("tx")
+print type(parm)
+print node.evalParm("tx")
+
+# name(), path(). parent() Inherited from hou.NetworkMovableItem
+# inputs(), children() Inherited Methods from hou.Node
+#geo1
+#/obj/geo1
+#(<hou.SopNode of type box at /obj/geo1/box1>, <hou.SopNode of type scatter::2.0 at /obj/geo1/scatter1>, <hou.SopNode of type torus at /obj/geo1/torus1>)
+#(<hou.ObjNode of type null at /obj/null1>,)
+#[[1, 0, 0, 0],
+# [0, 1, 0, 0],
+# [0, 0, 1, 0],
+# [0, 0, 0, 1]]
+#[0, 0, 0]
+#<class 'hou.Parm'>
+#0.0
+```
+
+#### SopNode Class
+
 ### Mocap Data Reader (mocapTxtReader.hipnc, pyMocapReader.py)
 ![](mocap.gif)
 ### Code To Run UI File In Houdini
