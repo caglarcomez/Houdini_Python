@@ -1,4 +1,18 @@
 # Python
+### HOU Module
+- hou
+  - NetworkItem
+    - NetworkMovableItem
+      - Node
+        - SopNode
+          - Geometry
+          - Parm
+        - ObjNode
+        - DopNode
+        - RopNode
+        - ...
+      - NetworkBox
+      - ...
 ### Mocap Data Reader (mocapTxtReader.hipnc, pyMocapReader.py)
 ![](mocap.gif)
 ### Code To Run UI File In Houdini
