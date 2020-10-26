@@ -1,5 +1,7 @@
 # Python
 ### HOU Module
+Houdini convention; classes start with capital case, methods start with lowercase.
+```
 - hou
   - NetworkItem
     - NetworkMovableItem
@@ -13,6 +15,15 @@
         - ...
       - NetworkBox
       - ...
+```
+
+```python
+print type(hou.node("/obj/geo1")), hou.node("/obj/geo1").name()
+print type(hou.pwd()), hou.pwd().name()
+#<class 'hou.ObjNode'> geo1
+#<class 'hou.ObjNode'> pythonscript1
+```
+
 ### Mocap Data Reader (mocapTxtReader.hipnc, pyMocapReader.py)
 ![](mocap.gif)
 ### Code To Run UI File In Houdini
