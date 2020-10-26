@@ -96,6 +96,47 @@ print parm.node()
 #geo1
 ```
 
+#### hou.Attrib, hou.Points, ...
+```python
+geo = sop.geometry()
+print type(geo)
+print geo.pointAttribs()
+print geo.points()
+
+pt = geo.points()[0]
+print pt.position()
+print pt.number()
+print pt.prims()
+#<class 'hou.Geometry'>
+#(<hou.Attrib Point 'P' (3 Floats) of geometry in /obj/geo1/scatter1 read-only>,)
+#(<hou.Point #0 of geometry in /obj/geo1/scatter1 read-only>, ...
+#[0.0408576, -0.197538, -0.5]
+#0
+#()
+```
+
+#### python SOP
+```python
+node = hou.pwd()
+geo = node.geometry()
+
+pt = geo.points()[0]
+pt.setPosition(hou.Vector3(0,1,0))
+
+geo.addAttrib(hou.attribType.Point,"pscale",0.1)
+pt0 = geo.points()[0]
+
+print pt0.number()
+
+attrib = geo.findPointAttrib("pscale")
+print pt0.attribValue(attrib)
+print pt0.attribValue("pscale")
+
+#0
+#0.10000000149
+#0.10000000149
+```
+
 ### Mocap Data Reader (mocapTxtReader.hipnc, pyMocapReader.py)
 ![](mocap.gif)
 ### Code To Run UI File In Houdini
