@@ -24,6 +24,27 @@ print type(hou.pwd()), hou.pwd().name()
 #<class 'hou.ObjNode'> pythonscript1
 ```
 
+#### ObjNode Class
+```
+- **Node**
+  - name()
+  - setName()
+  - path()
+  - parent()
+  - **ObjNode**
+    - origin()
+    - localTransform()
+    - worldTransform()
+    - **Node**
+      - children()
+      - allSubChildren()
+      - inputs()
+      - outputs()
+    - **Parm**
+      - parm(path)
+      - evalParm()
+      - parms()
+```
 ### Mocap Data Reader (mocapTxtReader.hipnc, pyMocapReader.py)
 ![](mocap.gif)
 ### Code To Run UI File In Houdini
