@@ -201,11 +201,11 @@ hou.parm('/out/mantra/execute').pressButton()
 
 ### Running Python Module Functions From Other Event Types
 
-![](hda_py03.JPG)
+![](hda_py04.JPG)
 
 Referencing a Python module function from OnUpdated Event
 
-![](hda_py04.JPG)
+![](hda_py03.JPG)
 
 ```python
 kwargs["node"].hm().myFunction()
